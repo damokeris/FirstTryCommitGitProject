@@ -131,7 +131,6 @@
      - conky
      - vim
      - neofetch 显示系统静态信息
-     - pig_cha
      - tlp
      - 亿图图示
         > 亿图图示官网[下载](https://www.edrawsoft.cn/download-edrawmax.html)地址
