@@ -2,6 +2,7 @@ i want to do some thing with code to make this world better.
 if you see it and have fun with this empty project ,you can chat with me.
 i am not a master,but i hava fun in coding ,so i think we will happy with each other!
 
+
 以下列举一些git的用法,以作参考.
 1.空行不匹配任何文件,因此常用作分隔符(以方便阅读)
 2.# 用于注释 , \ 表示转义 (如需使用实体\，则要加引号"\")
@@ -12,3 +13,40 @@ i am not a master,but i hava fun in coding ,so i think we will happy with each o
 5. 原先被排除的文件,使用 ! 模式后该文件将会重新被包含.但如果了该文件的父级目录被排除了,那么使用 ! 也不会再次被包含.
 6. [] 通常用于匹配一个字符列表,如: a[mn]z可匹配 amz 和anz.
 7. ** 用于匹配多级目录,如a/**/b 可匹配“a/b”,"a/x/b”,"a/x/y/b"等
+
+
+以下列举一些git的实际操作示例,以作参考.
+1.忽略所有内容
+example: *
+
+2.忽略所有的目录
+example: */
+
+3.忽略public目录下的所有文件,除了favicon.ico文件
+example: public/*
+         !public/favicon.ico文件
+
+4.只保留public目录下的a{一个字符}z.后缀名 的所有文件.
+example: 
+/*
+!public/
+
+/public/*
+!/public/a?z.*
+
+
+注意：
+1.文件已被追踪
+.gitignore只能忽略没有被追踪的文件,所以对于纳入版本管理后的文件,写 .gitignore是无效的.
+
+解决办法:
+先删除本地缓存,之后再加入.
+git rm -r --cached
+git add .
+git status
+
+2.文件已被忽略
+已被.gitignore忽略的文件是无法加入版本库的.
+
+解决办法:
+先移除.gitignore中的规则,然后将文件纳入版本管理即可.
