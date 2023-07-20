@@ -1,0 +1,14 @@
+i want to do some thing with code to make this world better.
+if you see it and have fun with this empty project ,you can chat with me.
+i am not a master,but i hava fun in coding ,so i think we will happy with each other!
+
+以下列举一些git的用法,以作参考.
+1.空行不匹配任何文件,因此常用作分隔符(以方便阅读)
+2.# 用于注释 , \ 表示转义 (如需使用实体\，则要加引号"\")
+3.* 可以匹配任何字符(0或多次) , ? 可以匹配任何字符(1次). (注意:它们都不可以匹配 /)
+4./ 用于分隔目录:
+    4.1 当 / 在开头时,表示从.gitignore文件所在目录开始匹配.否则,下级都将匹配.
+    4.2 当/在末尾时,只匹配目录.否则,同名的目录和文件都将匹配.
+5. 原先被排除的文件,使用 ! 模式后该文件将会重新被包含.但如果了该文件的父级目录被排除了,那么使用 ! 也不会再次被包含.
+6. [] 通常用于匹配一个字符列表,如: a[mn]z可匹配 amz 和anz.
+7. ** 用于匹配多级目录,如a/**/b 可匹配“a/b”,"a/x/b”,"a/x/y/b"等
