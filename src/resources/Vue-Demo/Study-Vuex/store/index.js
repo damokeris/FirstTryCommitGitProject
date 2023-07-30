@@ -1,7 +1,7 @@
 import { createStore } from 'vuex';
 
 //公共state对象，存储所有组件状态
-const state = {
+const state = null != window.sessionStorage.getItem('state')?JSON.parse(window.sessionStorage.getItem('state')):{
     user: {
         name: ''
     }
