@@ -48,4 +48,14 @@ sudo apt update
 sudo apt install nginx
 ```
 
-2.
+- 使用示例
+
+```md
+nginx 命令:
+
+nginx -t  # 检测nginx.conf语法
+nginx -s reload  # 重新读取nginx.conf
+nginx -s stop  # 停止nginx <==> kill -15 nginx
+nginx  # 默认是直接运行，前提是当前机器没有运行nginx，否则会报错
+```
+
