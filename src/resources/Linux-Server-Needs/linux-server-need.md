@@ -51,11 +51,18 @@ sudo apt install nginx
 - 使用示例
 
 ```md
-nginx 命令:
+1. nginx 命令:
 
 nginx -t  # 检测nginx.conf语法
 nginx -s reload  # 重新读取nginx.conf
 nginx -s stop  # 停止nginx <==> kill -15 nginx
 nginx  # 默认是直接运行，前提是当前机器没有运行nginx，否则会报错
+
+2. notes
+- Q：2.1 nginx -s reload 会发生什么？
+- A：nginx -s reload 是给master进程发信号,重新读取配置信息,导致worker重新生成,因此worker-pid会发生变化.但是master-pid是不变化的.当你restart nginx时,master-pid才会变化.
+- 
+- 
+- 
 ```
 
