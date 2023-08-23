@@ -25,7 +25,7 @@ uid nginx signing key <signing-key@nginx.com>
 
 - If the fingerprint is different, remove the file.
 
-  1.5 To set up the apt repository for stable nginx packages, run the following command:
+1.5 To set up the apt repository for stable nginx packages, run the following command:
 
 echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] \
 http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" \
