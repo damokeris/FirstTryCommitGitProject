@@ -77,6 +77,7 @@ nginx  # 默认是直接运行，前提是当前机器没有运行nginx，否则
 3. 部署后端项目
 
 在项目内通过maven package 打包为jar(注意修改生产环境的数据库连接配置)
+别忘了修改跨域请求的permit ip:port
 上传到服务器
 通过nohup java -jar 项目名.jar > 日志名.log 2>&1 & 
 在后台运行,并记录到日志
