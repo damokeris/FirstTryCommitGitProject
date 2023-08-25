@@ -25,7 +25,7 @@ uid nginx signing key <signing-key@nginx.com>
 
 - If the fingerprint is different, remove the file.
 
-  1.5 To set up the apt repository for stable nginx packages, run the following command:
+1.5 To set up the apt repository for stable nginx packages, run the following command:
 
 echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] \
 http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" \
@@ -65,4 +65,20 @@ nginx  # 默认是直接运行，前提是当前机器没有运行nginx，否则
 - 
 - 
 ```
+
+2. 部署前端项目
+
+在项目内运行npm run build(注意修改axios -> api地址)
+生成dist文件夹
+将dist文件夹上传到服务器
+修改nginx.conf的配置
+个人配置在/etc/nginx/conf.d/*.conf
+
+3. 部署后端项目
+
+在项目内通过maven package 打包为jar(注意修改生产环境的数据库连接配置)
+别忘了修改跨域请求的permit ip:port
+上传到服务器
+通过nohup java -jar 项目名.jar > 日志名.log 2>&1 & 
+在后台运行,并记录到日志
 
