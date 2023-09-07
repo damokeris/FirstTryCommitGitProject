@@ -24,16 +24,16 @@
             use mysql;
 
             创建用户和密码
-            create user 'lipeng'@'%' identified by '123456';
+            create user 'username'@'%' identified by 'password';
 
             创建必要的库
-            create database helloworld;
+            create database databasename;
 
             以下省略创建必要的表
             ...
 
             授予用户对特定库的所有操作权限
-            grant all on helloworld.* to 'lipeng'@'%';
+            grant all on databasename.* to 'username'@'%';
 
             刷新配置生效
             flush privileges;
