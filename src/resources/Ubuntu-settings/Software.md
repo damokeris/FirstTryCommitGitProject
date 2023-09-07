@@ -145,3 +145,5 @@
          > sudo apt install gnome-control-center
          
          > 还有一条命令好像是针对右键呼不出来菜单的？：sudo apt install unity-control-center
+
+         > 安装gnome优化：sudo apt install gnome-tweaks
