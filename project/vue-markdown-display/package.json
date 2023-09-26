@@ -8,6 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@kangc/v-md-editor": "^2.3.17",
+    "highlight.js": "^11.8.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
