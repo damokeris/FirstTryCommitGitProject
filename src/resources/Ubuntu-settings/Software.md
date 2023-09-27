@@ -58,8 +58,7 @@
 
 5. Redis
     - Redis的安装
-  
-            sudo apt install redis
+         sudo apt install redis
 
 ---
 
